@@ -1,0 +1,63 @@
+:tower_url: https://https://CRSA.node.<student#>.redhat-fierce.io/#/home
+
+= Workshop Lab Setup
+
+---
+****
+[IMPORTANT]
+Today's workshop infrastructure is being run in Amazon EC2. +
+Each student will have two instances to use. +
+Each of you should have received an email.  It has the following information on it. +
+- *EC2 SSH Key* +
+- Web URL for each of your EC2 instances. +
+  - *CRSA.node.0.redhat-fierce.io* +
+  - *CRSA.node.1.redhat-fierce.io* +
+
+If you didn't get one of these emails, let us know so we can give you the information about your lab environment.
+
+
+
+****
+
+[.lead]
+Workshop Infrastructure
+
+Each student's personal EC2 lab is equipped with the following:
+****
+* (1) Control node (to run ansible plays and install Ansible Tower).
+* (1) Endpoint nodes (to execute ansible playbooks upon).
+** _All three of the afore mentioned nodes are running Red Hat Enterprise Linux 7.3_
+* Ansible Core 2.2
+* Ansible Tower 3.0.3
+
+.Setup Your Environment
+****
+Before we can begin doing super-cool automations and such, we've got to get a few basics out of the way.
+Namely... ssh access to your EC2 nodes.
+
+[.lead]
+Testing your environment
+
+[NOTE]
+.Windows
+====
+* Open a terminal or terminal emulator (like PuTTy), http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html[To configure Putty to connect to your AWS AMI]
+====
+
+[NOTE]
+.Linux
+====
+* Change permissions on the private ssh key 400 and ssh to each one of your EC2 nodes/instances using ssh and your private ssh key that was mailed to you.
+* chmod 0400 CRSA-tower
+* ssh -i CRSA-tower ec2-user@<url of node>
+- EXAMPLE: ```ssh -i CRSA-tower ec2-user@CRSA.node.0.redhat-fierce.io```
+====
+
+[IMPORTANT]
+Be sure you can log in to your ec2 instances.  If you can't log in start shouting, loudly, and waving your hands!
+
+
+[.lead]
+End Result
+
+At this point, everyone should have logged into each of your 2 nodes.  If you haven't, let us know so we can get you fixed up.
